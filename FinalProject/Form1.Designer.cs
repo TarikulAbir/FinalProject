@@ -69,11 +69,12 @@ namespace FinalProject
             // btnCAccount
             // 
             this.btnCAccount.BackColor = System.Drawing.Color.Red;
+            this.btnCAccount.Font = new System.Drawing.Font("Century", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCAccount.Location = new System.Drawing.Point(121, 188);
             this.btnCAccount.Name = "btnCAccount";
             this.btnCAccount.Size = new System.Drawing.Size(266, 50);
             this.btnCAccount.TabIndex = 2;
-            this.btnCAccount.Text = "Create Account";
+            this.btnCAccount.Text = "Tution Registration";
             this.btnCAccount.UseVisualStyleBackColor = false;
             this.btnCAccount.Click += new System.EventHandler(this.btnCAccount_Click);
             // 

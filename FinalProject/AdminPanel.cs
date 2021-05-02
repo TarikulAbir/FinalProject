@@ -58,8 +58,7 @@ namespace FinalProject
             a1.TopMost = true;
             a1.AutoScroll = true;
             a1.FormBorderStyle = FormBorderStyle.None;
-            // this.pCoin.Controls.Add(a1);
-            // this.panel2_Paint.Controls.Add(a1);
+            
             this.panel3.Controls.Add(a1);
             
             a1.Show();

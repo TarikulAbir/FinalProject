@@ -30,6 +30,7 @@ namespace FinalProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@ namespace FinalProject
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,16 @@ namespace FinalProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1155, 107);
             this.panel1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(28, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 41);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "<";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -143,16 +153,6 @@ namespace FinalProject
             this.label2.TabIndex = 0;
             this.label2.Text = "Name:";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(28, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 41);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "<";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Admin_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -162,6 +162,7 @@ namespace FinalProject
             this.Controls.Add(this.panel2);
             this.Name = "Admin_Login";
             this.Text = "Admin Login";
+            this.Load += new System.EventHandler(this.Admin_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

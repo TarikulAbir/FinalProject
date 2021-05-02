@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tulpep.NotificationWindow;
 
 namespace FinalProject
 {
@@ -38,7 +39,11 @@ namespace FinalProject
             }
             else
             {
-                MessageBox.Show("Wrong password");
+                //MessageBox.Show("Wrong password");
+                PopupNotifier popup = new PopupNotifier();
+                popup.TitleText = "Login";
+                popup.ContentText = "Wrong User Name & Password";
+                popup.Popup();
 
             }
         }
@@ -53,6 +58,11 @@ namespace FinalProject
             Form1 f = new Form1();
             f.Show();
             this.Hide();
+        }
+
+        private void Admin_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

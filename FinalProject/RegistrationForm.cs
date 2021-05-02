@@ -15,20 +15,7 @@ namespace FinalProject
     public partial class RegistrationForm : Form
     {
         SqlConnection sq = new SqlConnection("Data Source=LAPTOP-LV212KEA;Initial Catalog=PLogin;Persist Security Info=True;User ID=sa;Password=Az429948@");
-        private object dataGridView1;
-
-        //void ShowMe()
-        //{
-        //    SqlCommand sC = new SqlCommand("select * from Information",sq);
-        //    SqlDataAdapter sA = new SqlDataAdapter(sC);
-        //    DataTable dT = new DataTable();
-        //    sA.Fill(dT);
-        //    dataGridView1 = dT;
-        //  //  NewMethod(dT);
-            
-        
-        //}
-         
+       
         public RegistrationForm()
         {
             InitializeComponent();
@@ -42,24 +29,18 @@ namespace FinalProject
         private void button1_Click(object sender, EventArgs e)
         {
             sq.Open();
-            SqlCommand sC = new SqlCommand("insert into Information values('" + tbName.Text + "','" + tbEmail.Text + "','" + tbAddress.Text + "','" + tbPhone.Text + "','" + tbExperience.Text + "')", sq);
+            SqlCommand sC = new SqlCommand("insert into Information values('" + tbName.Text.Trim() + "','" + tbEmail.Text.Trim() + "','" + tbAddress.Text.Trim() + "','" + tbPhone.Text.Trim() + "','" + tbExperience.Text.Trim() + "')", sq);
             sC.ExecuteNonQuery();
             sq.Close();
-
-
-
-            //MessageBox.Show("Successfully Registered");
-            //Login l1 = new Login();
-            //l1.Show();
-
+ 
             PopupNotifier popup = new PopupNotifier();
-            popup.TitleText = "BE HAPPY";
-            popup.ContentText = "Thank you";
+            popup.TitleText = "Registration";
+            popup.ContentText = "Registration Successful";
             popup.Popup();
-
-
-            //this.Hide();
             this.Hide();
+
+
+
 
         }
 
